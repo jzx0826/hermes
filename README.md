@@ -2,33 +2,23 @@
 
 日常脚本 / 工具集
 
-## 目录结构
+## 目录
 
 | 目录 | 说明 |
 |------|------|
-| `seu-course/` | SEU 选课工具（通选课捡漏） |
+| `抢课脚本/` | SEU 通选课捡漏工具 |
 
-## seu-course — SEU 选课工具
+## 抢课脚本 — SEU 通选课自动捡漏
 
 | 文件 | 说明 |
 |------|------|
-| `tongxuan_grab.py` | 通选课捡漏自动选课 — 打开浏览器，翻13页找有空位的课，找到就选，选完就停 |
-| `tongxuan_pickup_monitor.py` | 通选课捡漏盯梢 — 后台挂机，有空位时弹窗通知你手动选 |
-| `通选课捡漏.bat` | 双击启动 tongxuan_grab.py 的批处理 |
+| `tongxuan_grab.py` | 自动选 — 开浏览器翻页找有空位的课，找到就选，选完就停 |
+| `tongxuan_pickup_monitor.py` | 盯梢 — 后台挂机，有空位弹窗通知你手动选 |
+| `通选课捡漏.bat` | 双击启动上面的脚本 |
+| `seu_xk.txt.example` | 账号密码模板，复制改名为 `seu_xk.txt` 填你自己的 |
 
-### 使用方法
+### 使用
 
-1. 在 **脚本同目录** 下放 `seu_xk.txt`（两行）：
-   ```
-   一卡通号:213263577
-   密码:你的密码
-   ```
-2. 双击 `通选课捡漏.bat` 或 `python3 tongxuan_grab.py`
-3. 在弹出的浏览器里手输验证码登录，之后脚本自动工作
-
-### 依赖
-
-```bash
-pip install playwright plyer
-playwright install msedge
-```
+1. 把 `seu_xk.txt.example` 复制改名为 `seu_xk.txt`，填入一卡通号和密码
+2. 双击 `通选课捡漏.bat`
+3. 在弹出浏览器里手输验证码登录，之后自动干活
